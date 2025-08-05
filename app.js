@@ -48,6 +48,9 @@ async function weatherData(cityName) {
   container.appendChild(pElementCelcius);
   container.appendChild(pElementCondition);
 
+
+
+  //I have kept these logs for testing
   console.log(response);
   console.log(response.current.condition);
   console.log(response.current.condition.text);
