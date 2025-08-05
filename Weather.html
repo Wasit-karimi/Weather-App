@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <main class="w-full bg-black p-10 text-white dm-sans">
+      <div
+        class="w-[90%] h-screen mx-auto border border-gray-500 rounded-3xl relative"
+      >
+        <h1 class="text-3xl dm-sans py-4 text-white text-center text-shadow-lg">
+          Weather App
+        </h1>
+        <div
+          class="swiper mySwiper w-full h-[300px] max-w-xl rounded-xl overflow-hidden shadow-xl"
+        >
+          <div class="swiper-wrapper">
+            <div
+              class="swiper-slide bg-blue-500 text-white flex items-center justify-center h-64 text-2xl font-bold"
+            >
+              <img
+                src="https://media.istockphoto.com/id/841278554/photo/beautiful-morning-light-in-public-park-with-green-grass-field.jpg?s=612x612&w=0&k=20&c=rXOM3Uq9kPbpM5IWnCAnffHOP8KKpVKCJDMuNBlTNls="
+                alt="weather-status"
+                class="object-cover h-full w-full"
+              />
+            </div>
+            <div
+              class="swiper-slide bg-green-500 text-white flex items-center justify-center h-64 text-2xl font-bold"
+            >
+              <img
+                src="https://media.istockphoto.com/id/157527872/photo/storm-cloud.webp?b=1&s=612x612&w=0&k=20&c=4tuIGKWqiVtHtzNQ1YuB_mlIpMqm5e6JhOCFRapdEds="
+                alt="weather-status"
+                class="object-cover h-full w-full"
+              />
+            </div>
+            <div
+              class="swiper-slide bg-purple-500 text-white flex items-center justify-center h-64 text-2xl font-bold"
+            >
+              <img
+                src="https://media.istockphoto.com/id/2180696527/photo/sunlight-piercing-through-rain-clouds-illuminating-the-sky-with-a-soft-glow-amid-the-gloom.webp?b=1&s=612x612&w=0&k=20&c=sLSzwOfpDDDRq5MjwvwHt4ZTzeL9K6oOsyakp_pV9oU="
+                alt="weather-status"
+                class="object-cover h-full w-full"
+              />
+            </div>
+            <div
+              class="swiper-slide bg-purple-500 text-white flex items-center justify-center h-64 text-2xl font-bold"
+            >
+              <img
+                src="https://media.istockphoto.com/id/496257678/photo/snowy-forest.webp?b=1&s=612x612&w=0&k=20&c=rbkyxvxKES6TxCMUx0gMoacY8mpbsAIgmEFMfFU8OOY="
+                alt="weather-status"
+                class="object-cover h-full w-full"
+              />
+            </div>
+          </div>
+        </div>
+
+        <form class="flex flex-col" id="myForm">
+          <div class="w-[90%] mx-auto p-3 my-3 relative">
+            <input
+              type="text"
+              class="peer border border-gray-500 rounded-md outline-none w-[80%] px-3 py-2 mx-auto block bg-transparent focus:border-gray-200 focus:text-gray-200 duration-200 transition"
+              id="weatherInput"
+            />
+            <label
+              class="text-shadow dm-sans text-gray-500 bg-black/90 absolute left-[76px] top-5 capitalize px-2 peer-focus:-translate-y-5 peer-focus:text-sm peer-focus:text-gray-200 duration-200 transition"
+              >enter city name</label
+            >
+          </div>
+          <button
+            type="submit"
+            class="mx-auto text-gray-500 text-shadow px-4 py-2 hover:text-gray-200 transition duration-200 cursor-pointer dm-sans border rounded-md"
+          >
+            Get the Weather Info
+          </button>
+        </form>
+        <div
+          class="w-[90%] h-50 mx-auto my-5 text-3xl p-5 text-gray-500 dm-sans"
+          id="container"
+        ></div>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
