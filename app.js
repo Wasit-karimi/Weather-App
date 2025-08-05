@@ -22,38 +22,49 @@ form.addEventListener("submit", (e) => {
 
 async function weatherData(cityName) {
   const container = document.getElementById("container");
-  container.innerHTML = "";
+  container.innerHTML = `<div class="loader w-8 h-8 border-4 border-t-transparent border-white rounded-full animate-spin mx-auto"></div>
+  <p class="text-gray-200 text-md mt-2">Fetching weather...</p>
+  `
   const city = cityName;
-  const weather = await fetch(
-    `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=yes`
-  );
-  const response = await weather.json();
-  if (!response) {
-    return console.log("no data exists");
+
+  try {
+    const weather = await fetch(
+      `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=yes`
+    );
+    const response = await weather.json();
+    container.innerHTML = ''
+
+    const pElementCelcius = document.createElement("p");
+    pElementCelcius.innerText = `The weather is ${response.current.temp_c} celcius`;
+    pElementCelcius.classList.add("py-2", "text-xl", "text-gray-500");
+
+    const pElementCondition = document.createElement("p");
+    pElementCondition.innerText = `The weather is ${response.current.condition.text} `;
+    pElementCondition.classList.add(
+      "py-2",
+      "text-xl",
+      "text-gray-500",
+      "flex",
+      "gap-5",
+      "items-center"
+    );
+
+    const img = document.createElement("img");
+    img.src = response.current.condition.icon;
+
+    pElementCondition.appendChild(img);
+
+    container.appendChild(pElementCelcius);
+    container.appendChild(pElementCondition);
+
+    //I have kept these logs for testing
+    console.log(response);
+    console.log(response.current.condition);
+    console.log(response.current.condition.text);
+    console.log(response.current.condition.icon);
+    console.log(response.current.temp_c);
+  } catch (e) {
+    container.innerHTML = `<p class="text-red-400">Failed to load weather. Please try again.</p>`;
+    console.error(error);
   }
-
-  const pElementCelcius = document.createElement("p");
-  pElementCelcius.innerText = `The weather is ${response.current.temp_c} celcius`;
-  pElementCelcius.classList.add("py-2", "text-xl", "text-gray-500");
-
-  const pElementCondition = document.createElement("p");
-  pElementCondition.innerText = `The weather is ${response.current.condition.text} `;
-  pElementCondition.classList.add("py-2", "text-xl", "text-gray-500", "flex", "gap-5", "items-center");
-
-  const img = document.createElement("img");
-  img.src = response.current.condition.icon;
-
-  pElementCondition.appendChild(img);
-
-  container.appendChild(pElementCelcius);
-  container.appendChild(pElementCondition);
-
-
-
-  //I have kept these logs for testing
-  console.log(response);
-  console.log(response.current.condition);
-  console.log(response.current.condition.text);
-  console.log(response.current.condition.icon);
-  console.log(response.current.temp_c);
 }
