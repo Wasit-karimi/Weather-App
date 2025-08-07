@@ -19,9 +19,9 @@
     />
   </head>
   <body>
-    <main class="w-full bg-black p-10 text-white dm-sans">
+    <main class="w-full h-screen flex justify-between items-center bg-black p-10 text-white dm-sans">
       <div
-        class="w-[90%] h-screen mx-auto border border-gray-500 rounded-3xl relative"
+        class="lg:w-[50%] mx-auto border border-gray-500 rounded-3xl relative"
       >
         <h1 class="text-3xl dm-sans py-4 text-white text-center text-shadow-lg">
           Weather App
@@ -70,7 +70,7 @@
         </div>
 
         <form class="flex flex-col" id="myForm">
-          <div class="w-[50%] bg-black/90 mx-auto p-3 my-3 relative">
+          <div class="w-[100%] bg-black/90 mx-auto p-3 my-3 relative">
             <input
               type="text"
               class="peer border border-gray-500 rounded-md outline-none w-[80%] px-3 py-2 mx-auto block bg-transparent focus:border-gray-200 focus:text-gray-200 focus:bg-transparent hover:bg-transparent active:bg-transparent duration-200 transition"
@@ -89,7 +89,7 @@
           </button>
         </form>
         <div
-          class="w-[40%] mx-auto text-3xl p-5 text-gray-500 dm-sans"
+          class="w-[40%] lg:ml-[55px] text-3xl p-5 text-gray-500 dm-sans"
           id="container"
         ></div>
       </div>
