@@ -21,63 +21,63 @@
   <body>
     <main class="w-full h-screen flex justify-between items-center bg-black p-10 text-white dm-sans">
       <div
-        class="lg:w-[50%] mx-auto border border-gray-500 rounded-3xl relative"
+        class="lg:w-[50%] w-full mx-auto border border-gray-500 rounded-3xl relative"
       >
         <h1 class="text-3xl dm-sans py-4 text-white text-center text-shadow-lg">
           Weather App
         </h1>
         <div
-          class="swiper mySwiper w-full h-[300px] max-w-xl rounded-xl overflow-hidden shadow-xl"
+          class="swiper mySwiper w-full lg:h-[300px] h-[200px] px-5  max-w-xl rounded-xl overflow-hidden shadow-xl"
         >
           <div class="swiper-wrapper">
             <div
-              class="swiper-slide bg-blue-500 text-white flex items-center justify-center h-64 text-2xl font-bold"
+              class="swiper-slide bg-blue-500 text-white flex items-center justify-center h-64 text-2xl font-bold px-5 bg-transparent rounded-md"
             >
               <img
                 src="https://media.istockphoto.com/id/841278554/photo/beautiful-morning-light-in-public-park-with-green-grass-field.jpg?s=612x612&w=0&k=20&c=rXOM3Uq9kPbpM5IWnCAnffHOP8KKpVKCJDMuNBlTNls="
                 alt="weather-status"
-                class="object-cover h-full w-full"
+                class="object-cover rounded-md h-full w-full"
               />
             </div>
             <div
-              class="swiper-slide bg-green-500 text-white flex items-center justify-center h-64 text-2xl font-bold"
+              class="swiper-slide bg-green-500 text-white flex items-center justify-center h-64 text-2xl font-bold px-5 bg-transparent"
             >
               <img
                 src="https://media.istockphoto.com/id/157527872/photo/storm-cloud.webp?b=1&s=612x612&w=0&k=20&c=4tuIGKWqiVtHtzNQ1YuB_mlIpMqm5e6JhOCFRapdEds="
                 alt="weather-status"
-                class="object-cover h-full w-full"
+                class="object-cover h-full w-full rounded-md"
               />
             </div>
             <div
-              class="swiper-slide bg-purple-500 text-white flex items-center justify-center h-64 text-2xl font-bold"
+              class="swiper-slide bg-purple-500 text-white flex items-center justify-center h-64 text-2xl font-bold px-5 bg-transparent"
             >
               <img
                 src="https://media.istockphoto.com/id/2180696527/photo/sunlight-piercing-through-rain-clouds-illuminating-the-sky-with-a-soft-glow-amid-the-gloom.webp?b=1&s=612x612&w=0&k=20&c=sLSzwOfpDDDRq5MjwvwHt4ZTzeL9K6oOsyakp_pV9oU="
                 alt="weather-status"
-                class="object-cover h-full w-full"
+                class="object-cover h-full w-full rounded-md"
               />
             </div>
             <div
-              class="swiper-slide bg-purple-500 text-white flex items-center justify-center h-64 text-2xl font-bold"
+              class="swiper-slide bg-purple-500 text-white flex items-center justify-center h-64 text-2xl font-bold px-5 bg-transparent"
             >
               <img
                 src="https://media.istockphoto.com/id/496257678/photo/snowy-forest.webp?b=1&s=612x612&w=0&k=20&c=rbkyxvxKES6TxCMUx0gMoacY8mpbsAIgmEFMfFU8OOY="
                 alt="weather-status"
-                class="object-cover h-full w-full"
+                class="object-cover h-full w-full rounded-md"
               />
             </div>
           </div>
         </div>
 
         <form class="flex flex-col" id="myForm">
-          <div class="w-[100%] bg-black/90 mx-auto p-3 my-3 relative">
+          <div class="lg:w-[90%] w-full bg-black/90 mx-auto p-3 my-3 relative">
             <input
               type="text"
               class="peer border border-gray-500 rounded-md outline-none w-[80%] px-3 py-2 mx-auto block bg-transparent focus:border-gray-200 focus:text-gray-200 focus:bg-transparent hover:bg-transparent active:bg-transparent duration-200 transition"
               id="weatherInput"
             />
             <label
-              class="text-shadow dm-sans text-gray-500 bg-black absolute left-[90px] top-5 capitalize px-2 peer-focus:-translate-y-5 peer-focus:text-sm peer-focus:text-gray-200 duration-200 transition"
+              class="text-shadow dm-sans text-gray-500 bg-black absolute lg:left-[100px] md:left-[90px] left-[55px] top-5 capitalize px-2 peer-focus:-translate-y-5 peer-focus:text-sm peer-focus:text-gray-200 duration-200 transition"
               >enter city name</label
             >
           </div>
@@ -89,7 +89,7 @@
           </button>
         </form>
         <div
-          class="w-[40%] lg:ml-[55px] text-3xl p-5 text-gray-500 dm-sans"
+          class="w-full lg:ml-[55px] md:ml-[45px] text-3xl p-5 text-gray-500 dm-sans"
           id="container"
         ></div>
       </div>
