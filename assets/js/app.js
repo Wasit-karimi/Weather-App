@@ -35,7 +35,7 @@ async function weatherData(cityName) {
     container.innerHTML = ''
 
     const pElementCelcius = document.createElement("p");
-    pElementCelcius.innerText = `The weather is ${response.current.temp_c} celcius`;
+    pElementCelcius.innerText = `The weather is ${response.current.temp_c} celcius in ${cityName}`;
     pElementCelcius.classList.add("py-2", "text-xl", "text-gray-500");
 
     const pElementCondition = document.createElement("p");
