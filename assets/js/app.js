@@ -29,7 +29,7 @@ async function weatherData(cityName) {
 
   try {
     const weather = await fetch(
-      `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=yes`
+      `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=yes`
     );
     const response = await weather.json();
     container.innerHTML = ''
